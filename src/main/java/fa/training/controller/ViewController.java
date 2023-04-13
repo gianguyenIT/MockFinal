@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class Ping {
+public class ViewController {
 
     @GetMapping(value = "/ping")
     public String ping() {
@@ -21,4 +21,10 @@ public class Ping {
     public String test() {
         return "chotuitest";
     }
+
+    @GetMapping(value ="/shop")
+    public String shop() {
+        return "shop";
+    }
+
 }
