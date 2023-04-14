@@ -27,4 +27,9 @@ public class ViewController {
         return "shop";
     }
 
+    @GetMapping(value ="/product")
+    public String product() {
+        return "product";
+    }
+
 }
