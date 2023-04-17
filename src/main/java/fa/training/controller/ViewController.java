@@ -16,37 +16,43 @@ public class ViewController {
     @GetMapping(value = "/home")
     public String homePage(Model model) {
         model.addAttribute("pageTitle", "Home");
+        model.addAttribute("direction", "container/home");
         return "index";
     }
 
     @GetMapping(value ="/shop")
     public String shop(Model model) {
         model.addAttribute("pageTitle", "Shop");
-        return "shop";
+        model.addAttribute("direction", "container/shop");
+        return "index";
     }
 
     @GetMapping(value ="/product")
     public String product(Model model) {
         model.addAttribute("pageTitle", "Product");
-        return "product";
+        model.addAttribute("direction", "container/product");
+        return "index";
     }
 
 
     @GetMapping(value = "/cart")
     public String cart(Model model) {
         model.addAttribute("pageTitle", "Cart");
-        return "cart";
+        model.addAttribute("direction", "container/cart");
+        return "index";
     }
 
     @GetMapping(value ="/checkout")
     public String checkOut(Model model) {
         model.addAttribute("pageTitle", "Check Out");
-        return "checkout";
+        model.addAttribute("direction", "container/checkout");
+        return "index";
     }
 
     @GetMapping(value ="/contact")
     public String contact(Model model) {
         model.addAttribute("pageTitle", "Contact");
-        return "contact";
+        model.addAttribute("direction", "container/contact");
+        return "index";
     }
 }
