@@ -7,8 +7,20 @@
 <div th:replace="component/topbar :: topbarInit"></div>
 <!-- Topbar End -->
 
-<div th:replace="${direction} :: contentInit"></div>
 
+<!-- Navbar Start -->
+<div th:replace="component/navbar :: navbarStart"></div>
+<!-- Navbar End -->
+
+<!-- Page Header Start -->
+<div th:if="${direction != 'container/home'}">
+    <div th:replace="component/header :: pageHeader"></div>
+</div>
+    <!-- Page Header End -->
+
+<!--    Container Start -->
+<div th:replace="${direction} :: contentInit"></div>
+<!--    Container End -->
 
 <!-- Footer Start -->
 <div th:replace="component/footer :: footerInit"></div>
@@ -18,18 +30,6 @@
 <!-- Back to Top -->
 <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-<!--    JavaScript Librabries-->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script th:src="@{../static/lib/easing/easing.min.js}"></script>
-<script th:src="@{../static/lib/owlcarousel/owl.carousel.min.js}"></script>
-
-<!--    Contact JavaScript File-->
-<script th:src="@{../static/mail/jqBootstrapValidation.min.js}"></script>
-<script th:src="@{../static/mail/contact.js}"></script>
-
-<!--    Template Javascript-->
-<script th:src="@{../static/js/main.js}"></script>
-<script th:src="@{../static/js/test.js}"></script>
+<div th:replace="component/script :: scriptInit"></div>
 </body>
 </html>

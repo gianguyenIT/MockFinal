@@ -7,13 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ViewController {
 
-    @GetMapping(value = "/ping")
-    public String ping() {
-        System.out.println("hello");
-        return "index";
-    }
 
-    @GetMapping(value = "/home")
+    @GetMapping(value = {"/home", "/"})
     public String homePage(Model model) {
         model.addAttribute("pageTitle", "Home");
         model.addAttribute("direction", "container/home");

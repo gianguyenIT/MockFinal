@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
         <div class="navbar-nav mr-auto py-0" id="test">
-            <a th:href="@{/home}" class="nav-item nav-link active">Home</a>
+            <a th:href="@{/home}" class="nav-item nav-link">Home</a>
             <a th:href="@{/shop}" class="nav-item nav-link">Shop</a>
             <a th:href="@{/product}" class="nav-item nav-link">Shop Detail</a>
             <div class="nav-item dropdown">
@@ -94,4 +94,19 @@
         </div>
     </a>
 </div>
+
+
+<!-- Navbar Start -->
+<div class="container-fluid mb-5" th:fragment="navbarStart">
+    <div class="row border-top px-xl-5">
+        <div th:replace="component/navbar :: categoryInit"></div>
+        <div class="col-lg-9">
+            <nav th:replace="component/navbar :: navbarInit"></nav>
+            <div th:if="${direction == 'container/home'}">
+                <div th:replace="component/navbar :: slideImage"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Navbar End -->
 </html>
