@@ -10,6 +10,10 @@ public class ViewController {
 
     @GetMapping(value = {"/home", "/"})
     public String homePage(Model model) {
+        model.addAttribute("home", Boolean.TRUE); // Active Home Nav Bar
+        model.addAttribute("shop", Boolean.FALSE);
+        model.addAttribute("product", Boolean.FALSE);
+        model.addAttribute("contact", Boolean.FALSE);
         model.addAttribute("pageTitle", "Home");
         model.addAttribute("direction", "container/home");
         return "index";
@@ -17,6 +21,10 @@ public class ViewController {
 
     @GetMapping(value ="/shop")
     public String shop(Model model) {
+        model.addAttribute("home", Boolean.FALSE);
+        model.addAttribute("shop", Boolean.TRUE); // Active Shop Nav Bar
+        model.addAttribute("product", Boolean.FALSE);
+        model.addAttribute("contact", Boolean.FALSE);
         model.addAttribute("pageTitle", "Shop");
         model.addAttribute("direction", "container/shop");
         return "index";
@@ -24,6 +32,10 @@ public class ViewController {
 
     @GetMapping(value ="/product")
     public String product(Model model) {
+        model.addAttribute("home", Boolean.FALSE);
+        model.addAttribute("shop", Boolean.FALSE);
+        model.addAttribute("product", Boolean.TRUE); // Active Product Nav Bar
+        model.addAttribute("contact", Boolean.FALSE);
         model.addAttribute("pageTitle", "Product");
         model.addAttribute("direction", "container/product");
         return "index";
@@ -46,6 +58,10 @@ public class ViewController {
 
     @GetMapping(value ="/contact")
     public String contact(Model model) {
+        model.addAttribute("home", Boolean.FALSE);
+        model.addAttribute("shop", Boolean.FALSE);
+        model.addAttribute("product", Boolean.FALSE);
+        model.addAttribute("contact", Boolean.TRUE); // Active Contact Nav Bar
         model.addAttribute("pageTitle", "Contact");
         model.addAttribute("direction", "container/contact");
         return "index";

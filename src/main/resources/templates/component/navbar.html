@@ -8,10 +8,10 @@
 <!--    </button>-->
     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
         <div class="navbar-nav mr-auto py-0" id="test">
-            <a th:href="@{/home}" class="nav-item nav-link">Home</a>
-            <a th:href="@{/shop}" class="nav-item nav-link">Shop</a>
-            <a th:href="@{/product}" class="nav-item nav-link">Shop Detail</a>
-            <a th:href="@{/contact}" class="nav-item nav-link">Contact</a>
+            <a th:href="@{/home}" th:classappend="${home} ? 'active' : ''" class="nav-item nav-link">Home</a>
+            <a th:href="@{/shop}" th:classappend="${shop} ? 'active' : ''" class="nav-item nav-link">Shop</a>
+            <a th:href="@{/product}" th:classappend="${product} ? 'active' : ''" class="nav-item nav-link">Shop Detail</a>
+            <a th:href="@{/contact}" th:classappend="${contact} ? 'active' : ''" class="nav-item nav-link">Contact</a>
         </div>
         <div class="navbar-nav ml-auto py-0">
             <a href="" class="nav-item nav-link">Login</a>
