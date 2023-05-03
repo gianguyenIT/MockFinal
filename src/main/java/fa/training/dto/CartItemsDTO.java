@@ -13,5 +13,7 @@ public class CartItemsDTO {
     private Long id;
     private Long productId;
     private Integer quantity;
+    private Boolean status;
+
 
 }

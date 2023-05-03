@@ -66,4 +66,19 @@ public class ViewController {
         model.addAttribute("direction", "container/contact");
         return "index";
     }
+
+    @GetMapping(value = "/profile")
+    public String profile(Model model) {
+        model.addAttribute("pageTitle", "Profile");
+        model.addAttribute("direction", "container/profile");
+        return "index";
+    }
+
+    @GetMapping(value = "/purchase")
+    public String purchase(Model model) {
+        model.addAttribute("pageTitle", "Purchase");
+        model.addAttribute("direction", "container/purchase");
+        model.addAttribute("state", "To Receive");
+        return "index";
+    }
 }

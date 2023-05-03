@@ -23,7 +23,8 @@ public class CartItems implements Serializable {
     private Long productId;
     @Column(name = "quantity")
     private Integer quantity;
-
+    @Column(name = "status")
+    private Boolean status;
     @ManyToOne
     @JoinColumn(name = "id_customer")
     private Customer customer;
